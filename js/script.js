@@ -19,8 +19,8 @@ const container = document.querySelector('.container');
 
 // creo il ciclo per prelevare gli elementi dall'array
 for(let i = 0; i < imgArray.length; i++){
-    let imgItem = imgArray[i]
-    console.log(imgItem)
+    let imgItem = imgArray[i];
+    console.log(imgItem);
 
     // creo gli elementi box-img dove inserire l'immagine all'interno dell'elemento container
     let boxImg = `
@@ -29,7 +29,19 @@ for(let i = 0; i < imgArray.length; i++){
         </div>`;
 
     // inserisco il div.box-img all'interno del div.container
+    container.innerHTML += boxImg;
 
-
-    // creo il button per attivare e disattivare le immagini
 }
+
+// seleziono gli elementi in pagina
+const boxes = document.getElementsByClassName('box-img');
+console.log(boxes);
+
+let activeImg = 0;
+
+boxes[activeImg].classList.add('active');
+console.log(boxes[0]);
+
+// creo il button per attivare e disattivare le immagini
+const nextImg = document.querySelector(.next-img)
+
