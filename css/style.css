@@ -15,6 +15,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .box-img{
@@ -26,4 +27,24 @@ img{
 
 .active{
     display: block;
+}
+
+.buttonbox{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+
+button{
+    position: absolute;
+    transform: translate(0, -50%);
+}
+
+.next-img{
+    right: 0;
+    top: 50%;
+}
+
+.prev-img{
+    top: 50%;
 }

@@ -5,7 +5,6 @@
 // Al click dell’utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
 
 // creo l'array immagini
-
 const imgArray = [
     'img/01.webp',
     'img/02.webp',
@@ -48,6 +47,9 @@ const prevImg = document.querySelector('.prev-img');
 
 nextImg.addEventListener('click',
     function(){
+
+        // rimuovo il bug di fine immagine
+        if(activeImg < imgArray.length -1){
         // cacello l'active dall'elemento attivo
         boxes[activeImg].classList.remove('active');
         // do il valore + 1 ad activeimg ogni click
@@ -55,18 +57,24 @@ nextImg.addEventListener('click',
 
         // aggiungo classe active
         boxes[activeImg].classList.add('active');
+
+        }
     }
 )
 
 prevImg.addEventListener('click',
     function(){
+
+        // rimuovo il bug di fine immagine
+        if(activeImg > 0){
         // cacello l'active dall'elemento attivo
         boxes[activeImg].classList.remove('active');
-        // do il valore + 1 ad activeimg ogni click
+        // do il valore - 1 ad activeimg ogni click
         activeImg = activeImg - 1;
-
         // aggiungo classe active
         boxes[activeImg].classList.add('active');
+
+        }
     }
 )
 
