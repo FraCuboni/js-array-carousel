@@ -14,4 +14,22 @@ const imgArray = [
     'img/05.webp'
 ]
 
+// collego l'elemento container
+const container = document.querySelector('.container');
+
 // creo il ciclo per prelevare gli elementi dall'array
+for(let i = 0; i < imgArray.length; i++){
+    let imgItem = imgArray[i]
+    console.log(imgItem)
+
+    // creo gli elementi box-img dove inserire l'immagine all'interno dell'elemento container
+    let boxImg = `
+        <div class="box-img">
+            <img src="${imgItem}" alt="">
+        </div>`;
+
+    // inserisco il div.box-img all'interno del div.container
+
+
+    // creo il button per attivare e disattivare le immagini
+}
