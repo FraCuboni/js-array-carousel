@@ -43,5 +43,31 @@ boxes[activeImg].classList.add('active');
 console.log(boxes[0]);
 
 // creo il button per attivare e disattivare le immagini
-const nextImg = document.querySelector(.next-img)
+const nextImg = document.querySelector('.next-img');
+const prevImg = document.querySelector('.prev-img');
+
+nextImg.addEventListener('click',
+    function(){
+        // cacello l'active dall'elemento attivo
+        boxes[activeImg].classList.remove('active');
+        // do il valore + 1 ad activeimg ogni click
+        activeImg = activeImg + 1;
+
+        // aggiungo classe active
+        boxes[activeImg].classList.add('active');
+    }
+)
+
+prevImg.addEventListener('click',
+    function(){
+        // cacello l'active dall'elemento attivo
+        boxes[activeImg].classList.remove('active');
+        // do il valore + 1 ad activeimg ogni click
+        activeImg = activeImg - 1;
+
+        // aggiungo classe active
+        boxes[activeImg].classList.add('active');
+    }
+)
+
 
